@@ -1,0 +1,19 @@
+.Ship-logo {
+  height: 40vmin;
+  pointer-events: click;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Ship-logo {
+    animation: Ship-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes Ship-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
