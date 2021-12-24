@@ -12,6 +12,7 @@ class Coords extends React.Component {
     this.state = {
       longitude: 0,
       latitude: 0,
+      timestamp: 0,
     };
   }
 
@@ -21,6 +22,7 @@ class Coords extends React.Component {
       this.setState({
         longitude: tmp.iss_position.longitude,
         latitude: tmp.iss_position.latitude,
+        timestamp: tmp.timestamp,
       });
     });
     setInterval(() => {
@@ -31,6 +33,7 @@ class Coords extends React.Component {
             this.setState({
               longitude: tmp.iss_position.longitude,
               latitude: tmp.iss_position.latitude,
+              timestamp: tmp.timestamp,
             });
           }
         })
@@ -45,7 +48,7 @@ class Coords extends React.Component {
       <div className="Coords tc">
         <p className="fw8 b--light-blue ba bw2 w-auto dib moon-gray">
           {" "}
-          {`Coords ${this.state.latitude}, ${this.state.longitude} `}
+          {`Coords ${this.state.latitude}, ${this.state.longitude}, ${this.state.timestamp}`}
         </p>
       </div>
     );
