@@ -12,4 +12,5 @@ Click on ISS image to pause
 
 ## Usage
 
-Clone files and and simply run `npm start`
+To use this project You will need to install node.js. After installing:
+Clone files from this repository, go into main folder and run `npm install`. Then simply run `npm start`
