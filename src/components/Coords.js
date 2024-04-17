@@ -1,11 +1,13 @@
 import React from "react";
 
+//?asynchronously load iss coordinates from open-notify api. After succesfull fetch deserialize data from into json (asynchronously) and return it
 async function getCoords() {
   const coords = await fetch("http://api.open-notify.org/iss-now.json");
   const data = await coords.json();
   return data;
 }
 
+//?main component responsible for displaying ccoordinates
 class Coords extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class Coords extends React.Component {
       timestamp: 0,
     };
   }
-
+  //? after mounting invoke getCoords() [line 4] and set component state's elements accordingly
   componentDidMount() {
     getCoords().then((tmp) => {
       console.log(tmp);
@@ -25,6 +27,8 @@ class Coords extends React.Component {
         timestamp: tmp.timestamp,
       });
     });
+    //? creates interval in with getCoords() [line 4] will be invoked and it's returned value will be used for updating component's state
+    //? interva is 100ms
     setInterval(() => {
       getCoords()
         .then((tmp) => {
@@ -43,6 +47,7 @@ class Coords extends React.Component {
     }, 100);
   }
 
+  //? basic react render function using string interpolation to render current coordinates
   render() {
     return (
       <div className="Coords tc">

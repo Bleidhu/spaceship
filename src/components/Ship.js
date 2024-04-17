@@ -1,6 +1,7 @@
 import React from "react";
 import "./Ship.css";
 
+//? component rendering rotating ship. Can be paused or running after seting state acorrdingly
 const Ship = (props) => {
   return (
     <div className="center pa5 ph5-ns flex items-center flex-column">
