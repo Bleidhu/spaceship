@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spaceship/static/css/main.2848b019.chunk.css",
+    "main.css": "/spaceship/static/css/main.f36b2d27.chunk.css",
     "main.js": "/spaceship/static/js/main.6c512553.chunk.js",
     "main.js.map": "/spaceship/static/js/main.6c512553.chunk.js.map",
     "runtime~main.js": "/spaceship/static/js/runtime~main.44d26804.js",
@@ -11,9 +11,9 @@
     "static/js/3.d9c1e0bb.chunk.js": "/spaceship/static/js/3.d9c1e0bb.chunk.js",
     "static/js/3.d9c1e0bb.chunk.js.map": "/spaceship/static/js/3.d9c1e0bb.chunk.js.map",
     "index.html": "/spaceship/index.html",
-    "precache-manifest.a12a5817e0ec0dd718dcbad31617ca4f.js": "/spaceship/precache-manifest.a12a5817e0ec0dd718dcbad31617ca4f.js",
+    "precache-manifest.e55000993fc85731694c62145b052fba.js": "/spaceship/precache-manifest.e55000993fc85731694c62145b052fba.js",
     "service-worker.js": "/spaceship/service-worker.js",
     "static/css/2.a94b31b9.chunk.css.map": "/spaceship/static/css/2.a94b31b9.chunk.css.map",
-    "static/css/main.2848b019.chunk.css.map": "/spaceship/static/css/main.2848b019.chunk.css.map"
+    "static/css/main.f36b2d27.chunk.css.map": "/spaceship/static/css/main.f36b2d27.chunk.css.map"
   }
 }
