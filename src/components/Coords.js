@@ -2,7 +2,7 @@ import React from "react";
 
 //?asynchronously load iss coordinates from open-notify api. After succesfull fetch deserialize data from into json (asynchronously) and return it
 async function getCoords() {
-  const coords = await fetch("http://api.open-notify.org/iss-now.json");
+  const coords = await fetch("https://api.wheretheiss.at/v1/satellites/25544");
   const data = await coords.json();
   return data;
 }
@@ -22,8 +22,8 @@ class Coords extends React.Component {
     getCoords().then((tmp) => {
       console.log(tmp);
       this.setState({
-        longitude: tmp.iss_position.longitude,
-        latitude: tmp.iss_position.latitude,
+        longitude: tmp.longitude,
+        latitude: tmp.latitude,
         timestamp: tmp.timestamp,
       });
     });
@@ -35,8 +35,8 @@ class Coords extends React.Component {
           //console.log(tmp);
           if (!this.props.refresh) {
             this.setState({
-              longitude: tmp.iss_position.longitude,
-              latitude: tmp.iss_position.latitude,
+              longitude: tmp.longitude,
+              latitude: tmp.latitude,
               timestamp: tmp.timestamp,
             });
           }
